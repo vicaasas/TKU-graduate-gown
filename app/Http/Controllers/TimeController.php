@@ -102,6 +102,11 @@ class TimeController extends Controller
 
     private function validateTime(Request $request)
     {
+        if ($request->has('content')) {
+            $request->validate([
+                'content' => 'required|unique:App\Time,content',
+            ]);
+        }
         $request->validate([
             'start_time' => 'required|date',
             'end_time' => 'required|date|after:start_time',

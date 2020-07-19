@@ -15,7 +15,7 @@ class CreateTimesTable extends Migration
     {
         Schema::create('times', function (Blueprint $table) {
             $table->id();
-            $table->string('content')->comment('名稱');
+            $table->string('content')->unique()->comment('名稱');
             $table->date('start_time')->comment('開始時間');
             $table->date('end_time')->comment('結束時間');
             $table->timestamps();

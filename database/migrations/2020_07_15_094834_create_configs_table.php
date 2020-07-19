@@ -15,7 +15,7 @@ class CreateConfigsTable extends Migration
     {
         Schema::create('configs', function (Blueprint $table) {
             $table->id();
-            $table->string('key')->comment('名稱');
+            $table->string('key')->unique()->comment('名稱');
             $table->string('value')->comment('設定值');
             $table->timestamps();
         });
