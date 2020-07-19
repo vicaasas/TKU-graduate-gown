@@ -70,9 +70,7 @@ Route::group(['middleware' => ['auth']], function () {
         ->name('return.cloths.post')
         ->middleware('can:admin');
 
-    Route::resource('time', 'TimeController', ['only' => [
-        'index', 'create', 'store', 'edit',
-    ]]);
+    Route::resource('time', 'TimeController', ['except' => ['create', 'edit', 'show']]);
 
     Route::resource('cloth', 'ClothController', ['only' => [
         'index', 'create', 'store', 'edit',
