@@ -13,6 +13,10 @@ class User extends Authenticatable
     const ROLE_ADMIN = 'admin';
     const ROLE_STUDENT = 'student';
 
+    const DEPARTMENT_BACHELOR = '學士';
+    const DEPARTMENT_MASTER = '碩士';
+    const DEPARTMENT_DOCTOR = '博士';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -38,4 +42,9 @@ class User extends Authenticatable
      */
     protected $casts = [
     ];
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order', 'stu_id', 'id');
+    }
 }

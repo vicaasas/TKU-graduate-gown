@@ -87,24 +87,12 @@
                             <th class="text-center align-middle"><strong>學制</strong></th>
                             <th class="text-center align-middle"><strong>服裝 / 配件</strong></th>
                             <th class="text-center align-middle"><strong>尺寸 / 顏色</strong></th>
-                            <th class="text-center align-middle"><strong>數量</strong></th>
+                            <th class="text-center align-middle"><strong>總計數量</strong></th>
+                            <th class="text-center align-middle"><strong>剩餘數量</strong></th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($cloth_list as $key=>$list_1)
-                            <tr>
-                                <td class="text-center table-light align-middle"
-                                    rowspan="{{ count($list_1) }}"><strong>{{ $key }}</strong></td>
-                                @foreach($list_1->groupBy('name') as $key=>$data)
-                                    <td class="text-center table-light align-middle"
-                                        rowspan="{{ count($data) }}">{{ $key }}</td>
-                                    @foreach($data as $meow)
-                                        <td class="text-center align-middle">{{ $meow->property }}</td>
-                                        <td class="text-center align-middle">{{ $meow->quantity }}</td>
-                            </tr>
-                        @endforeach
-                        @endforeach
-                        @endforeach
+                        {!! $cloth_table !!}
                         </tbody>
                     </table>
                     <a href="#" class="btn btn-primary">

@@ -23,14 +23,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', function () {
         return Redirect::route('home');
     });
-    Route::get('/index', function () {
-        return view('index',
-            [
-                'location' => Config::where('key', '歸還地點')->first()->value,
-                'time_list' => Time::all(),
-                'cloth_list' => Cloth::all()->groupBy('type')
-            ]);
-    })->name('home');
+    Route::get('/index', 'IndexController@index')
+        ->name('home');
 
     // 個人設定
     Route::prefix('profile')->group(function () {

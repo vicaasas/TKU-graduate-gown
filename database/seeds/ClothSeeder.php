@@ -19,91 +19,91 @@ class ClothSeeder extends Seeder
             'type' => '學士',
             'name' => '服',
             'property' => 'S',
-            'quantity' => '0',
+            'quantity' => '330',
         ]);
         DB::table('cloths')->insert([
             'type' => '學士',
             'name' => '服',
             'property' => 'M',
-            'quantity' => '0',
+            'quantity' => '520',
         ]);
         DB::table('cloths')->insert([
             'type' => '學士',
             'name' => '服',
             'property' => 'L',
-            'quantity' => '0',
+            'quantity' => '420',
         ]);
         DB::table('cloths')->insert([
             'type' => '學士',
             'name' => '服',
             'property' => 'XL',
-            'quantity' => '0',
+            'quantity' => '210',
         ]);
         DB::table('cloths')->insert([
             'type' => '學士',
             'name' => '領巾',
             'property' => '白',
-            'quantity' => '0',
+            'quantity' => '1050',
         ]);
         DB::table('cloths')->insert([
             'type' => '學士',
             'name' => '領巾',
             'property' => '藍',
-            'quantity' => '0',
+            'quantity' => '480',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '服',
             'property' => 'M',
-            'quantity' => '0',
+            'quantity' => '220',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '服',
             'property' => 'L',
-            'quantity' => '0',
+            'quantity' => '190',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '服',
             'property' => 'XL',
-            'quantity' => '0',
+            'quantity' => '160',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '白',
-            'quantity' => '0',
+            'quantity' => '25',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '黃',
-            'quantity' => '0',
+            'quantity' => '20',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '橘',
-            'quantity' => '0',
+            'quantity' => '30',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '灰',
-            'quantity' => '0',
+            'quantity' => '300',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '藍',
-            'quantity' => '0',
+            'quantity' => '100',
         ]);
         DB::table('cloths')->insert([
             'type' => '碩士',
             'name' => '帽穗、披肩',
             'property' => '紫',
-            'quantity' => '0',
+            'quantity' => '50',
         ]);
         DB::table('cloths')->insert([
             'type' => '博士',
@@ -115,13 +115,13 @@ class ClothSeeder extends Seeder
             'type' => '博士',
             'name' => '服',
             'property' => 'M',
-            'quantity' => '0',
+            'quantity' => '129',
         ]);
         DB::table('cloths')->insert([
             'type' => '博士',
             'name' => '服',
             'property' => 'L',
-            'quantity' => '0',
+            'quantity' => '36',
         ]);
         DB::table('cloths')->insert([
             'type' => '博士',
