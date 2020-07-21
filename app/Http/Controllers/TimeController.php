@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Time;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Redirect;
 
 class TimeController extends Controller
 {
@@ -44,7 +45,7 @@ class TimeController extends Controller
         $time->end_time = $request->input('end_time');
         $time->save();
         $request->session()->flash('success', '新增資料成功！');
-        return $this->index();
+        return $this->redirectAfterDone();
     }
 
     /**
@@ -84,7 +85,7 @@ class TimeController extends Controller
         $time->end_time = $request->end_time;
         $time->save();
         $request->session()->flash('success', '資料變更成功！');
-        return $this->index();
+        return $this->redirectAfterDone();
     }
 
     /**
@@ -97,7 +98,12 @@ class TimeController extends Controller
     {
         $time->delete();
         $request->session()->flash('success', '資料刪除成功！');
-        return $this->index();
+        return $this->redirectAfterDone();
+    }
+
+    private function redirectAfterDone()
+    {
+        return Redirect::route('time.index');
     }
 
     private function validateTime(Request $request)
