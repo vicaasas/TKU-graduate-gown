@@ -51,6 +51,16 @@ Route::group(['middleware' => ['auth']], function () {
         })->name('not_return');
     });
 
+    // 系統設定
+    Route::group(['prefix' => 'system', 'middleware' => ['can:admin'], 'as' => 'system.'], function () {
+        Route::get('/', 'SystemController@index')
+            ->name('index');
+        Route::post('new_user', 'SystemController@new_user')
+            ->name('new_user');
+        Route::post('drop_students', 'SystemController@dropStudents')
+            ->name('drop_students');
+    });
+
     // 更新歸還地點
     Route::post('return_location/update', 'ConfigController@update_location')
         ->name('update.location')

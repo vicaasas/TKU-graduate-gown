@@ -20,9 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('password')->comment('密碼');
             $table->string('role')->default(User::ROLE_STUDENT)->comment('身份組');
 
-            $table->string('name')->comment('學生姓名');
-            $table->string('department')->comment('學 / 碩 / 博');
-            $table->string('class')->comment('系級');
+            $table->string('name')->default('')->comment('學生姓名');
+            $table->string('department')->default('')->comment('學制');
+            $table->string('class')->default('')->comment('系級');
 
             $table->longText('base64Img')->comment('管理員圖片');
             $table->rememberToken();
