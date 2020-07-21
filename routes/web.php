@@ -66,9 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('time', 'TimeController', ['except' => ['create', 'edit', 'show']]);
 
-    Route::resource('cloth', 'ClothController', ['only' => [
-        'index', 'create', 'store', 'edit',
-    ]]);
+    Route::resource('cloth', 'ClothController', ['except' => ['create', 'edit', 'show']]);
 });
 
 Auth::routes([
