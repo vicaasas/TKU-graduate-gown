@@ -21,7 +21,6 @@ exit
 
 git clone https://github.com/allen0099/TKU-graduate-gown larvel
 ```
-## 巨坑坑坑
 
 ### Laradock
 
