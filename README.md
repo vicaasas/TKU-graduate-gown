@@ -32,10 +32,6 @@ docker-compose build xxx
 docker-compose up --force-recreate -d xxx
 ```
 
-### mysql
-
-- 沒事更你媽 port 傻子
-- 如果你有更換 mysql port 的話，記得在 `my.cnf` 裡面的 `[mysqld]` 底下寫 `port={變更的 port}`
 
 ## Code of Conduct
 
